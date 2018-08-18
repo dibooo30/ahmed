@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 var mongoose = require('mongoose');
+const compression = require('compression')
+
 // Port Number
 const port = process.env.PORT || 3000;
 
@@ -27,10 +29,10 @@ app.use(express.static(path.join(__dirname, 'dist/')));
 
 
 app.use(cors());
-
 app.use(express.json());
 // app.use('/admin', admin)
 app.use('/message', message)
+app.use(compression())
 
 // Index Route
 app.get('/', (req, res) => {
