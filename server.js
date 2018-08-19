@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 // // Connect To Database (OLD CODE)
-// 'mongodb://ahmed-diab:152010mohmed@ds125302.mlab.com:25302/message-ahmed' ||
+// 'mongodb://ahmed-diab:152010mohmed@ds125302.mlab.com:25302/message-ahmed'
 // "mongodb://localhost:27017/mean-stake"
 mongoose.connect('mongodb://ahmed-diab:152010mohmed@ds125302.mlab.com:25302/message-ahmed', { useNewUrlParser: true });
 // // On Connection
